@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "dgSpecHash": "bpyA19SuwSEYqeWF+4KrQm+1zZyjigHnw+r/JWWm4/RHos0Xze/YkcdldaFT7EG9+DgzJWtznND1hZRmrDYCig==",
+  "success": true,
+  "projectFilePath": "A:\\soft\\VisualStudio\\projects\\ThingsToDo\\ThingsToDo.iOS\\ThingsToDo.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\07van\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\07van\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.6\\xamarin.communitytoolkit.2.0.6.nupkg.sha512",
+    "C:\\Users\\07van\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\07van\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Essentials с 1.7.7 на 1.7.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n ThingsToDo.iOS -> ThingsToDo -> Xamarin.Essentials (>= 1.7.7) \r\n ThingsToDo.iOS -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Forms с 5.0.0.2578 на 5.0.0.2196. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n ThingsToDo.iOS -> ThingsToDo -> Xamarin.Forms (>= 5.0.0.2578) \r\n ThingsToDo.iOS -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Новая папка\**" />
+    <EmbeddedResource Remove="Новая папка\**" />
+    <None Remove="Новая папка\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Inter-Black.otf" />
+    <None Remove="Fonts\Inter-Bold.otf" />
+    <None Remove="Fonts\Inter-ExtraBold.otf" />
+    <None Remove="Fonts\Inter-Medium.otf" />
+    <None Remove="Fonts\Inter-Regular.otf" />
+    <None Remove="Fonts\Inter-SemiBold.otf" />
+    <None Remove="Fonts\Jost-Black.ttf" />
+    <None Remove="Fonts\Jost-Bold.ttf" />
+    <None Remove="Fonts\Jost-ExtraBold.ttf" />
+    <None Remove="Fonts\Jost-Medium.ttf" />
+    <None Remove="Fonts\Jost-Regular.ttf" />
+    <None Remove="Fonts\Jost-SemiBold.ttf" />
+    <None Remove="Fonts\Manrope-Bold.ttf" />
+    <None Remove="Fonts\Manrope-ExtraBold.ttf" />
+    <None Remove="Fonts\Manrope-Medium.ttf" />
+    <None Remove="Fonts\Manrope-Regular.ttf" />
+    <None Remove="Fonts\McLaren-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Inter-Black.otf" />
+    <EmbeddedResource Include="Fonts\Inter-Bold.otf" />
+    <EmbeddedResource Include="Fonts\Inter-ExtraBold.otf" />
+    <EmbeddedResource Include="Fonts\Inter-Medium.otf" />
+    <EmbeddedResource Include="Fonts\Inter-Regular.otf" />
+    <EmbeddedResource Include="Fonts\Inter-SemiBold.otf" />
+    <EmbeddedResource Include="Fonts\Jost-Black.ttf" />
+    <EmbeddedResource Include="Fonts\Jost-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Jost-ExtraBold.ttf" />
+    <EmbeddedResource Include="Fonts\Jost-Medium.ttf" />
+    <EmbeddedResource Include="Fonts\Jost-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Jost-SemiBold.ttf" />
+    <EmbeddedResource Include="Fonts\Manrope-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Manrope-ExtraBold.ttf" />
+    <EmbeddedResource Include="Fonts\Manrope-Medium.ttf" />
+    <EmbeddedResource Include="Fonts\Manrope-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\McLaren-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="GroupCreation.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
