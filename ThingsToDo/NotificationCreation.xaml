@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ThingsToDo.NotificationCreation">
+    <StackLayout  BackgroundColor="#DAFFFB">
+        <RelativeLayout VerticalOptions="Start">
+            <Frame WidthRequest="353" RelativeLayout.YConstraint="-20" BackgroundColor="#176B87" HeightRequest="75" CornerRadius="25" HasShadow="True" >
+                <StackLayout Orientation="Horizontal">
+                    <Label FontFamily="InterBlack" FontSize="30" Text="Создание нового напоминания:" TextColor="#DAFFFB" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </Frame>
+        </RelativeLayout>
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Label Text="Название:" TextColor="#001C30" FontSize="27" FontFamily="JostRegular" HorizontalTextAlignment="Center"></Label>
+            <Frame BackgroundColor="#64CCC5" CornerRadius="25" xct:ShadowEffect.Color="Black">
+                <StackLayout>
+                    <Entry TextChanged="NotificationName_TextChanged" Keyboard="Plain" x:Name="NotificationName" Text="Введите название напоминания" TextColor="Gray" FontFamily="JostRegular" FontSize="20"></Entry>
+                </StackLayout>
+            </Frame>
+            <Label Text="Выберите группу:" TextColor="#001C30" FontSize="27" FontFamily="JostRegular" HorizontalTextAlignment="Center"></Label>
+            <Frame BackgroundColor="#64CCC5" CornerRadius="25" xct:ShadowEffect.Color="Black">
+                <StackLayout>
+                    <Picker SelectedIndexChanged="GroupName_SelectedIndexChanged" x:Name="GroupName" Title="Выберите название группы" TitleColor="Gray" FontFamily="JostRegular" FontSize="20"></Picker>
+                </StackLayout>
+            </Frame>
+            <Label Text="Выберите дату:" TextColor="#001C30" FontSize="27" FontFamily="JostRegular" HorizontalTextAlignment="Center"></Label>
+            <Frame BackgroundColor="#64CCC5" CornerRadius="25" xct:ShadowEffect.Color="Black">
+                <StackLayout>
+                    <DatePicker  x:Name="Date"  TextColor="Gray" FontFamily="JostRegular" FontSize="20"></DatePicker>
+                </StackLayout>
+            </Frame>
+            <Label Text="Выберите время:" TextColor="#001C30" FontSize="27" FontFamily="JostRegular" HorizontalTextAlignment="Center"></Label>
+            <Frame BackgroundColor="#64CCC5" CornerRadius="25" xct:ShadowEffect.Color="Black">
+                <StackLayout>
+                    <TimePicker x:Name="Time"  TextColor="Gray" FontFamily="JostRegular" FontSize="20"></TimePicker>
+                </StackLayout>
+            </Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Margin="0, 20, 0, 0">
+                <ImageButton x:Name="SavingButton" Clicked="SavingButton_Clicked" IsEnabled="False"  Margin="0,0,50,0" Source="DisabledSave.png" HorizontalOptions="Start"></ImageButton>
+                <ImageButton Clicked="CancellingButton_Clicked" WidthRequest="70" HeightRequest="70" x:Name="CancellingButton" Margin="50,0,0,0" Source="Exit.png" HorizontalOptions="End"></ImageButton>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

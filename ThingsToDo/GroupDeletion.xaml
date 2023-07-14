@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="ThingsToDo.GroupDeletion">
+    <StackLayout  BackgroundColor="#DAFFFB">
+        <RelativeLayout VerticalOptions="Start">
+            <Frame WidthRequest="353" RelativeLayout.YConstraint="-20" BackgroundColor="#176B87" HeightRequest="75" CornerRadius="25" HasShadow="True" >
+                <StackLayout Orientation="Horizontal">
+                    <Label FontFamily="InterBlack" FontSize="30" Text="Удаление созданной группы:" TextColor="#DAFFFB" HorizontalTextAlignment="Center"></Label>
+                </StackLayout>
+            </Frame>
+        </RelativeLayout>
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            
+            
+                <StackLayout x:Name="PickerLayout">
+                    <Label x:Name="empty_group"  HorizontalTextAlignment="Center" Text="Группы не найдены! Для начала создайте группу!" TextColor="Gray" FontSize="30" FontFamily="JostRegular" FontAttributes="Bold"></Label>
+                </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="0,150,0,0">
+                <ImageButton x:Name="ConfirmingButton" Clicked="ConfirmingButton_Clicked" IsEnabled="False" Margin="0,0,50,0" Source="DisabledSave.png" HorizontalOptions="Start"></ImageButton>
+                <ImageButton WidthRequest="70" HeightRequest="70" Clicked="CancellingButton_Clicked" x:Name="CancellingButton" Margin="50,0,0,0" Source="Exit.png" HorizontalOptions="End"></ImageButton>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

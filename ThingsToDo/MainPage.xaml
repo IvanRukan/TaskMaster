@@ -5,25 +5,27 @@
              x:Class="ThingsToDo.MainPage"
              >
 
-    <ScrollView BackgroundColor="#DAFFFB">
-        <StackLayout >
-            <RelativeLayout x:Name="main_layout">
-                <Frame WidthRequest="353" RelativeLayout.YConstraint="-20" BackgroundColor="#176B87" HeightRequest="75" CornerRadius="25" HasShadow="True" >
+    
+        <StackLayout x:Name="outer_layout" BackgroundColor="#DAFFFB">
+            
+                <Frame WidthRequest="353" RelativeLayout.YConstraint="-20" BackgroundColor="#176B87" HeightRequest="75"  HasShadow="True">
                     <StackLayout Orientation="Horizontal">
                         <Button Text="Ближайшие напоминания" TextColor="#DAFFFB" BackgroundColor="#176B87" FontFamily="InterSemiBold"  FontSize="11" WidthRequest="118"></Button>
                         <Button xct:ShadowEffect.Color="#DAFFFB"  Text="Все напоминания" TextColor="#DAFFFB" BackgroundColor="#176B87" FontFamily="InterBlack" FontSize="11" WidthRequest="118"></Button>
                         <Button Text="Напоминания по группе" TextColor="#DAFFFB" BackgroundColor="#176B87" FontFamily="InterSemiBold"  FontSize="11" WidthRequest="118"></Button>
                     </StackLayout>
                 </Frame>
-                <Label x:Name="empty_group" RelativeLayout.YConstraint="250" HorizontalTextAlignment="Center" Text="Группы не найдены! Создайте новую группу, чтобы добавить напоминания." TextColor="Gray" FontSize="30" FontFamily="JostRegular" FontAttributes="Bold"></Label>
-                <Frame WidthRequest="150" RelativeLayout.YConstraint="450" RelativeLayout.XConstraint="100" BackgroundColor="#176B87" HeightRequest="12" CornerRadius="20" HasShadow="True" >
+                    
+                <Label VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,50,0,0"  x:Name="empty_group" RelativeLayout.YConstraint="250" HorizontalTextAlignment="Center" Text="Группы не найдены! Создайте новую группу, чтобы добавить напоминания." TextColor="Gray" FontSize="30" FontFamily="JostRegular" FontAttributes="Bold"></Label>
+                    <Button Margin="0,0,0,150" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" CornerRadius="25" x:Name="Button_NewGroup" Clicked="NewGroup" WidthRequest="170" Text="Создать новую группу" FontSize="12" FontFamily="InterSemiBold"  TextColor="#DAFFFB" BackgroundColor="#176B87"></Button>
+                
+            
+            
+                <Frame x:Name="FooterWithoutDB"  WidthRequest="353" BackgroundColor="#176B87" HeightRequest="50" HasShadow="True" VerticalOptions="EndAndExpand">
+                    <Button x:Name="ButtonWithoutDB" Clicked="GitHubLink" Text="Планировщик задач, @IvanRukan" BackgroundColor="#176B87" TextColor="#DAFFFB" FontFamily="InterRegular" BorderColor="#DAFFFB"></Button>
                 </Frame>
-                <Button Clicked="NewGroup" WidthRequest="150" Text="Создать новую группу" FontSize="12" FontFamily="InterSemiBold" RelativeLayout.YConstraint="450" RelativeLayout.XConstraint="120" TextColor="#DAFFFB" BackgroundColor="#176B87"></Button>
-            </RelativeLayout>
-            <Frame WidthRequest="353" BackgroundColor="#176B87" HeightRequest="50" HasShadow="True" >
-                <Button Clicked="GitHubLink" Text="Планировщик задач, @IvanRukan" BackgroundColor="#176B87" TextColor="#DAFFFB" FontFamily="InterRegular"></Button>
-            </Frame>
+            
         </StackLayout>
-    </ScrollView>
+    
 
 </ContentPage>

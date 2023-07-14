@@ -14,3 +14,5 @@ A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\ref
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\ThingsToDo.pdb
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\ref\ThingsToDo.dll
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\GroupCreation.xaml.g.cs
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\GroupDeletion.xaml.g.cs
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\NotificationCreation.xaml.g.cs

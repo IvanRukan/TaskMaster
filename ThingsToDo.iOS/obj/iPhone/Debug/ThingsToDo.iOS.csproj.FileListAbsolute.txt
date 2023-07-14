@@ -62,3 +62,11 @@ A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\obj\iPhone\Debug\ThingsT
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\obj\iPhone\Debug\ThingsToDo.iOS.csproj.CopyComplete
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\obj\iPhone\Debug\ThingsToDo.iOS.exe
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\obj\iPhone\Debug\ThingsToDo.iOS.pdb
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\bin\iPhone\Debug\SQLite-net.dll
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\bin\iPhone\Debug\SQLitePCLRaw.batteries_v2.dll
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\bin\iPhone\Debug\SQLitePCLRaw.nativelibrary.dll
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\bin\iPhone\Debug\SQLitePCLRaw.core.dll
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\bin\iPhone\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\bin\iPhone\Debug\System.Buffers.dll
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\bin\iPhone\Debug\System.Memory.dll
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.iOS\bin\iPhone\Debug\System.Runtime.CompilerServices.Unsafe.dll

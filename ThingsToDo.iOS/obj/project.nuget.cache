@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "bpyA19SuwSEYqeWF+4KrQm+1zZyjigHnw+r/JWWm4/RHos0Xze/YkcdldaFT7EG9+DgzJWtznND1hZRmrDYCig==",
+  "dgSpecHash": "GpiBEObi0IAaVNIGsyWRJdzBd+psHoHx0urAiZN8I/U6adEjFLx4/v8QABK8z1BHlFvYuNuR3bhQagBh8sLMyQ==",
   "success": true,
   "projectFilePath": "A:\\soft\\VisualStudio\\projects\\ThingsToDo\\ThingsToDo.iOS\\ThingsToDo.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\07van\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "C:\\Users\\07van\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "C:\\Users\\07van\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\07van\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "C:\\Users\\07van\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\07van\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\07van\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\07van\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\07van\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.6\\xamarin.communitytoolkit.2.0.6.nupkg.sha512",
     "C:\\Users\\07van\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\07van\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"

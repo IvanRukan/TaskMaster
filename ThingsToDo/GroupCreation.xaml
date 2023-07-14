@@ -7,20 +7,20 @@
         <RelativeLayout VerticalOptions="Start">
             <Frame WidthRequest="353" RelativeLayout.YConstraint="-20" BackgroundColor="#176B87" HeightRequest="75" CornerRadius="25" HasShadow="True" >
                 <StackLayout Orientation="Horizontal">
-                    <Label xct:ShadowEffect.Color="#DAFFFB" FontFamily="InterBlack" FontSize="30" Text="Создание новой группы:" TextColor="#DAFFFB" HorizontalTextAlignment="Center"></Label>
+                    <Label FontFamily="InterBlack" FontSize="30" Text="Создание новой группы:" TextColor="#DAFFFB" HorizontalTextAlignment="Center"></Label>
                 </StackLayout>
             </Frame>
         </RelativeLayout>
         <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
-            <Label Text="Название:" TextColor="Black" FontSize="40" FontFamily="JostRegular" HorizontalTextAlignment="Center"></Label>
+            <Label Text="Название:" TextColor="#001C30" FontSize="40" FontFamily="JostRegular" HorizontalTextAlignment="Center"></Label>
             <Frame BackgroundColor="#64CCC5" CornerRadius="25" xct:ShadowEffect.Color="Black">
                 <StackLayout>
-                    <Entry x:Name="GroupName" Text="Введите название группы" TextColor="Gray" FontFamily="JostRegular" FontSize="25"></Entry>
+                    <Entry TextChanged="GroupName_TextChanged" Keyboard="Plain" x:Name="GroupName" Text="Введите название группы" TextColor="Gray" FontFamily="JostRegular" FontSize="25"></Entry>
                 </StackLayout>
             </Frame>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="0,150,0,0">
-                <ImageButton Margin="0,0,50,0" Source="Save.png" HorizontalOptions="Start"></ImageButton>
-                <ImageButton Margin="50,0,0,0" Source="Exit.png" HorizontalOptions="End"></ImageButton>
+                <ImageButton x:Name="SavingButton" Clicked="SavingButton_Clicked"  Margin="0,0,50,0" Source="Save.png" HorizontalOptions="Start"></ImageButton>
+                <ImageButton WidthRequest="70" HeightRequest="70" x:Name="CancellingButton" Clicked="CancellingButton_Clicked" Margin="50,0,0,0" Source="Exit.png" HorizontalOptions="End"></ImageButton>
             </StackLayout>
         </StackLayout>
     </StackLayout>
