@@ -68,7 +68,7 @@ namespace ThingsToDo
                             Date = Date.Date.Add(Time.Time),
 
                         };
-                        await DisplayAlert(Title = notification.Date.ToString(), "Alert", "Ok");
+                        
                         App.Db.SaveNotification(notification);
                         GroupName.SelectedItem = null;
                         NotificationName.Text = "Введите название напоминания";

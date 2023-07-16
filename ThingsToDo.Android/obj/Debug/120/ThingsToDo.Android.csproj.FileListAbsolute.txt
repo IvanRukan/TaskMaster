@@ -738,3 +738,5 @@ A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\androi
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\android\src\mono\com\google\firebase\FirebaseApp_BackgroundStateChangeListenerImplementor.java
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\android\src\mono\com\google\firebase\iid\internal\FirebaseInstanceIdInternal_NewTokenListenerImplementor.java
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\android\src\mono\com\google\firebase\installations\internal\FidListenerImplementor.java
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\res\drawable\cirle.png
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\res\drawable\edit.png

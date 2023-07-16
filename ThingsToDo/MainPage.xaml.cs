@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LocalNotifications;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,7 +10,10 @@ using System.Threading.Tasks;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
 using Xamarin.Forms.Shapes;
+using Image = Xamarin.Forms.Image;
+using Label = Xamarin.Forms.Label;
 
 namespace ThingsToDo
 {
@@ -25,11 +30,11 @@ namespace ThingsToDo
             Uri uri = new Uri("https://github.com/IvanRukan?tab=repositories");
             await Browser.OpenAsync(uri);
         }
-        public int counter = 0;
-         protected override void OnAppearing()
+        
+        protected override void OnAppearing()
         {
-
-            
+            NotificationCenter.Current.OnNotificationReceived += Current_OnNotificationReceived;
+            List<Group> all_groups = App.Db.GetGroups();
             List<Group> resulting_groups = App.Db.GetGroups();
             if (resulting_groups?.Any() != true)
             {
@@ -161,43 +166,7 @@ namespace ThingsToDo
             group_events.CornerRadius = 20;
             top_frame_buttons.Children.Add(group_events);
             top_frame.Content = top_frame_buttons;
-            /*
-            StackLayout group_box = new StackLayout();
-            group_box.Children.Clear();
-            Label created_groups = new Label();
-            Frame created_groups_border = new Frame();
-            created_groups_border.BorderColor = Color.Black;
-            created_groups_border.BackgroundColor = Color.FromHex("#DAFFFB");
-            created_groups_border.HorizontalOptions = LayoutOptions.Center;
-            created_groups_border.VerticalOptions = LayoutOptions.Center;
-            created_groups_border.CornerRadius = 25;
-            created_groups.Text = "Созданные группы:";
-            created_groups.TextColor = Color.FromHex("#001C30");
-            created_groups.FontFamily = "JostRegular";
-            created_groups.FontSize = 25;
-            created_groups_border.Content = created_groups;
-            group_box.Children.Add(created_groups_border);
-            group_box.VerticalOptions = LayoutOptions.Center;
-            group_box.HorizontalOptions = LayoutOptions.Center;
             
-            for (int i = 0; i < resulting_groups.Count; i++)
-            {
-                Frame notifications_frame = new Frame();
-                notifications_frame.CornerRadius = 25;
-                notifications_frame.BackgroundColor = Color.FromHex("#64CCC5");
-                notifications_frame.Margin = new Thickness(0, 20, 0, 0);
-                StackLayout notification_layout = new StackLayout();
-                Label notifications_group = new Label();
-                notifications_group.Text = resulting_groups[i].Name;
-                notifications_group.TextColor = Color.Black;
-                
-                notifications_group.FontFamily = "JostRegular";
-                notifications_group.FontSize = 20;
-                notifications_group.VerticalOptions = LayoutOptions.Start;
-                notification_layout.Children.Add(notifications_group);
-                notifications_frame.Content = notification_layout;
-                group_box.Children.Add(notifications_frame);
-            } */
             StackLayout button_layout = new StackLayout();
             BoxView new_line = new BoxView();
             new_line.HorizontalOptions = LayoutOptions.FillAndExpand;
@@ -228,7 +197,7 @@ namespace ThingsToDo
             delete_group.Clicked += DeleteGroup;
             button_layout.Children.Add(create_group);
             button_layout.Children.Add(delete_group);
-           // group_box.Children.Add(button_layout);
+           
             
             Frame footer = new Frame();
             footer.BackgroundColor = Color.FromHex("#176B87");            
@@ -244,21 +213,12 @@ namespace ThingsToDo
             footer.Margin = new Thickness(0, 0, 0, 0);
             footer.Content = git_hub_button;
             footer.VerticalOptions = LayoutOptions.FillAndExpand;
-            
-
-            //outer_layout.MinimumHeightRequest += footer.Height;
-
-            // collection view suka nahuy 
-
-
             CollectionView group_box = new CollectionView();
-            
-            
-            // group_box.SetBinding(ItemsView.ItemsSourceProperty, "Group");
             group_box.ItemsSource = resulting_groups;
             group_box.VerticalOptions = LayoutOptions.FillAndExpand;
             group_box.ItemTemplate = new DataTemplate(() =>
             {
+                
                 StackLayout group = new StackLayout();
                 Frame notifications_frame = new Frame();
                 notifications_frame.CornerRadius = 25;
@@ -266,7 +226,7 @@ namespace ThingsToDo
                 notifications_frame.Margin = new Thickness(0, 20, 0, 0);
                 StackLayout notification_layout = new StackLayout();
                 Label notifications_group = new Label();
-                notifications_group.SetBinding(Label.TextProperty, "Name");
+                notifications_group.SetBinding(Label.TextProperty, new Binding("Name"));
                 notifications_group.TextColor = Color.Black;
                 notifications_group.FontFamily = "JostRegular";
                 notifications_group.FontSize = 20;
@@ -282,13 +242,42 @@ namespace ThingsToDo
                 notifications_button.HorizontalOptions = LayoutOptions.Center;
                 notifications_button.Clicked += Notifications_button_Clicked;
                 notification_layout.Children.Add(notifications_group);
+                StackLayout vert_notify = new StackLayout();
+                Group test = all_groups[0];
+                List<UserNotification> all_notify = App.Db.GetNotifications();
+                for (int i = 0; i < all_notify.Count; i++)
+                {
+                    if (all_notify[i].Group == test.Id)
+                    {
+                        StackLayout horiz = new StackLayout();
+                        horiz.Orientation = StackOrientation.Horizontal;
+                        Image circle = new Image();
+                        circle.Source = "Cirle.png";
+                        circle.BackgroundColor = Color.FromHex("#64CCC5");
+                        circle.HorizontalOptions = LayoutOptions.Start;
+                        Label notify_name = new Label();
+                        notify_name.Text = all_notify[i].Name;
+                        notify_name.FontFamily = "ManropeBold";
+                        notify_name.FontSize = 15;
+                        ImageButton edit = new ImageButton();
+                        edit.Source = "Edit.png";
+                        edit.BackgroundColor = Color.FromHex("#64CCC5");
+                        edit.HorizontalOptions = LayoutOptions.End;
+                        horiz.Children.Add(circle);
+                        horiz.Children.Add(notify_name);
+                        horiz.Children.Add(edit);
+                        vert_notify.Children.Add(horiz);
+                    }
+                }
+                notification_layout.Children.Add(vert_notify);
                 notification_layout.Children.Add(line);
+                all_groups.RemoveAt(0);
                 notification_layout.Children.Add(notifications_button);
                 notifications_frame.Content = notification_layout;
                 notifications_frame.HorizontalOptions = LayoutOptions.CenterAndExpand;
                 group.Children.Add(notifications_frame);
                 return group;
-            });
+            }); 
             Label created_groups = new Label();
             Frame created_groups_border = new Frame();
             created_groups_border.BorderColor = Color.Black;
@@ -305,14 +294,13 @@ namespace ThingsToDo
             created_groups_layout.Children.Add(created_groups_border);
             StackLayout footer_layout = new StackLayout();
             footer_layout.Children.Add(button_layout);
-            
             group_box.Header = created_groups_layout;
             group_box.Footer = footer_layout;
             outer_layout.Children.Add(top_frame);
             outer_layout.Children.Add(group_box);
             outer_layout.Children.Add(footer);
             
-            
+
 
 
 
@@ -324,6 +312,14 @@ namespace ThingsToDo
 
 
         }
+
+        private void Current_OnNotificationReceived(NotificationEventArgs e)
+        {
+            int id = (int)e.NotificationId;
+            App.Db.DeleteNotification(id); 
+            
+        }
+
         readonly NotificationCreation new_notification = new NotificationCreation();
         private async void Notifications_button_Clicked(object sender, EventArgs e)
         {
@@ -361,6 +357,9 @@ namespace ThingsToDo
                 return;
             }
         }
+        
+        
+       
 
     }
 }
