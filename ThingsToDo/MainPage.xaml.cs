@@ -316,7 +316,8 @@ namespace ThingsToDo
         private void Current_OnNotificationReceived(NotificationEventArgs e)
         {
             int id = (int)e.NotificationId;
-            App.Db.DeleteNotification(id); 
+            App.Db.DeleteNotification(id);
+            OnAppearing();
             
         }
 

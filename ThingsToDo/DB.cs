@@ -34,7 +34,7 @@ namespace ThingsToDo
 
         public void DeleteGroup(Group group) 
         {
-            DeleteNotification(group.Id);
+            DeleteNotificationWithGroup(group.Id);
             conn.Delete(group);
             
         }
@@ -57,7 +57,20 @@ namespace ThingsToDo
             {
                 if(all[i].Id == id)
                 {
-                    NotificationCenter.Current.Cancel(notificationId: id);
+                    
+                    conn.Delete(all[i]);
+                    return;
+                }
+            }
+        }
+        public void DeleteNotificationWithGroup(int id)
+        {
+            List<UserNotification> all = App.Db.GetNotifications();
+            for (int i = 0; i < all.Count; i++)
+            {
+                if (all[i].Group == id)
+                {
+                    NotificationCenter.Current.Cancel(notificationId: all[i].Id);
                     conn.Delete(all[i]);
                     return;
                 }
