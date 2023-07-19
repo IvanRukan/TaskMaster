@@ -21,6 +21,8 @@ namespace ThingsToDo
         protected override void OnAppearing()
 
         {
+            base.OnAppearing();
+            
             SavingButton.IsEnabled = false;
             SavingButton.Source = "DisabledSave.png";
             CancellingButton.WidthRequest = 70;
@@ -41,7 +43,7 @@ namespace ThingsToDo
                 CancellingButton.WidthRequest = 50;
                 CancellingButton.HeightRequest = 50;
                 GroupName.SelectedItem = null;
-                NotificationName.Text = "Введите название напоминания";
+                
                 await Navigation.PopModalAsync();
             }
             catch
@@ -71,7 +73,7 @@ namespace ThingsToDo
                         
                         App.Db.SaveNotification(notification);
                         GroupName.SelectedItem = null;
-                        NotificationName.Text = "Введите название напоминания";
+                        
                         break;
                     }
                 }

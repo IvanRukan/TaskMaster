@@ -35,6 +35,7 @@ item;obj\Debug\120\res\drawable\splash_screen.xml
 item;obj\Debug\120\res\values\styles.xml
 layer-list;obj\Debug\120\res\drawable\splash_screen.xml
 LinearLayout;A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\lp\68\jl\res\layout\bottomtablayout.xml
+monochrome;obj\Debug\120\res\mipmap-anydpi-v26\icon.xml
 paths;A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\lp\56\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 resources;A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\lp\68\jl\res\values\attrs.xml
 resources;A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo.Android\obj\Debug\120\lp\68\jl\res\values\strings.xml

@@ -27,7 +27,7 @@ namespace ThingsToDo
             SavingButton.IsEnabled = false;
             SavingButton.Source = "DisabledSave.png";
             
-            GroupName.Text = "Введите название группы";
+            
         }
         private async void CancellingButton_Clicked(object sender, EventArgs e)
         {
@@ -51,7 +51,7 @@ namespace ThingsToDo
                 {
                     Name = GroupName.Text,
                 };
-                GroupName.Text = "Введите название группы";
+                
                 App.Db.SaveGroup(group);
                 await Navigation.PopModalAsync();
                 

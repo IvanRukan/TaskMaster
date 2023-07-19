@@ -19,8 +19,9 @@
                 </StackLayout>
             
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="0,150,0,0">
-                <ImageButton x:Name="ConfirmingButton" Clicked="ConfirmingButton_Clicked" IsEnabled="False" Margin="0,0,50,0" Source="DisabledSave.png" HorizontalOptions="Start"></ImageButton>
-                <ImageButton WidthRequest="70" HeightRequest="70" Clicked="CancellingButton_Clicked" x:Name="CancellingButton" Margin="50,0,0,0" Source="Exit.png" HorizontalOptions="End"></ImageButton>
+                
+                <ImageButton WidthRequest="70" HeightRequest="70" Clicked="CancellingButton_Clicked" x:Name="CancellingButton" Margin="0,0,50,0" Source="Exit.png" HorizontalOptions="Start"></ImageButton>
+                <ImageButton x:Name="ConfirmingButton" Clicked="ConfirmingButton_Clicked" IsEnabled="False" Margin="50,0,0,0" Source="DisabledSave.png" HorizontalOptions="End"></ImageButton>
             </StackLayout>
         </StackLayout>
     </StackLayout>

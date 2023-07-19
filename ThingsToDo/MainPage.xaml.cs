@@ -33,6 +33,33 @@ namespace ThingsToDo
         
         protected override void OnAppearing()
         {
+            base.OnAppearing();
+            List<NotificationRequest> pending = new List<NotificationRequest>();
+            List<UserNotification> existing = new List<UserNotification>();
+            existing = App.Db.GetNotifications();
+            pending = NotificationCenter.Current.GetPendingNotificationRequests();
+            List<int> useless = new List<int>();
+            List<int> usefull = new List<int>();
+            for(int i = 0; i < existing.Count; i++)
+            {
+                useless.Add(existing[i].Id);
+            }
+            for(int i = 0; i < pending.Count; i++)
+            {
+                for(int j = 0; j < existing.Count; j++)
+                {
+                    
+                    if(pending[i].NotificationId == existing[j].Id) {
+                        usefull.Add(pending[i].NotificationId);
+                    }
+                }
+            }
+            var to_delete = useless.Except(usefull);
+            List<int> delete_int = (to_delete).ToList();
+            for(int i =0; i < delete_int.Count; i ++)
+            {
+                App.Db.DeleteNotification(delete_int[i]);
+            }
             NotificationCenter.Current.OnNotificationReceived += Current_OnNotificationReceived;
             List<Group> all_groups = App.Db.GetGroups();
             List<Group> resulting_groups = App.Db.GetGroups();
@@ -220,8 +247,10 @@ namespace ThingsToDo
             {
                 
                 StackLayout group = new StackLayout();
+                group.Padding = new Thickness(70, 0, 70, 0);
                 Frame notifications_frame = new Frame();
                 notifications_frame.CornerRadius = 25;
+              //  notifications_frame.MinimumWidthRequest = 50;
                 notifications_frame.BackgroundColor = Color.FromHex("#64CCC5");
                 notifications_frame.Margin = new Thickness(0, 20, 0, 0);
                 StackLayout notification_layout = new StackLayout();
@@ -231,6 +260,7 @@ namespace ThingsToDo
                 notifications_group.FontFamily = "JostRegular";
                 notifications_group.FontSize = 20;
                 notifications_group.VerticalOptions = LayoutOptions.Start;
+                notifications_group.HorizontalOptions = LayoutOptions.CenterAndExpand;
                 BoxView line = new BoxView();
                 line.Color = Color.Black;
                 line.HorizontalOptions = LayoutOptions.FillAndExpand;
@@ -274,7 +304,7 @@ namespace ThingsToDo
                 all_groups.RemoveAt(0);
                 notification_layout.Children.Add(notifications_button);
                 notifications_frame.Content = notification_layout;
-                notifications_frame.HorizontalOptions = LayoutOptions.CenterAndExpand;
+               // notifications_frame.HorizontalOptions = LayoutOptions.CenterAndExpand;
                 group.Children.Add(notifications_frame);
                 return group;
             }); 
@@ -316,6 +346,7 @@ namespace ThingsToDo
         private void Current_OnNotificationReceived(NotificationEventArgs e)
         {
             int id = (int)e.NotificationId;
+            
             App.Db.DeleteNotification(id);
             OnAppearing();
             

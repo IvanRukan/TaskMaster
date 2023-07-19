@@ -20,7 +20,7 @@ namespace ThingsToDo
         
         protected override void OnAppearing()
         {
-
+            base.OnAppearing();
             CancellingButton.WidthRequest = 70;
             CancellingButton.HeightRequest = 70;
             ConfirmingButton.Source = "DisabledSave.png";

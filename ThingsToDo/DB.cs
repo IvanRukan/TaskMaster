@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using SQLite;
 using LocalNotifications;
-
-
+using System.Drawing;
 
 namespace ThingsToDo
 {
@@ -46,7 +45,7 @@ namespace ThingsToDo
             
             
             NotificationCenter.Current.Schedule(notificationId: notification.Id, title: "Новое напоминание!",
-                description: notification.Name, dateTime: notification.Date, payload: "");
+                description: notification.Name, dateTime: notification.Date, payload: "", androidOptions: new AndroidOptions {ShowBadge = true});
             
             
         }

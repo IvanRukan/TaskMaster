@@ -22,10 +22,10 @@ public final class R {
 		public static final int ttcIndex = 0x7f030411;
 	}
 	public static final class color {
-		public static final int notification_action_color_filter = 0x7f0500c6;
-		public static final int notification_icon_bg_color = 0x7f0500c7;
-		public static final int ripple_material_light = 0x7f0500d4;
-		public static final int secondary_text_default_material_light = 0x7f0500d6;
+		public static final int notification_action_color_filter = 0x7f0500c7;
+		public static final int notification_icon_bg_color = 0x7f0500c8;
+		public static final int ripple_material_light = 0x7f0500d5;
+		public static final int secondary_text_default_material_light = 0x7f0500d7;
 	}
 	public static final class dimen {
 		public static final int compat_button_inset_horizontal_material = 0x7f060059;
@@ -53,18 +53,18 @@ public final class R {
 	}
 	public static final class drawable {
 		public static final int abc_vector_test = 0x7f070054;
-		public static final int notification_action_background = 0x7f07009a;
-		public static final int notification_bg = 0x7f07009b;
-		public static final int notification_bg_low = 0x7f07009c;
-		public static final int notification_bg_low_normal = 0x7f07009d;
-		public static final int notification_bg_low_pressed = 0x7f07009e;
-		public static final int notification_bg_normal = 0x7f07009f;
-		public static final int notification_bg_normal_pressed = 0x7f0700a0;
-		public static final int notification_icon_background = 0x7f0700a1;
-		public static final int notification_template_icon_bg = 0x7f0700a2;
-		public static final int notification_template_icon_low_bg = 0x7f0700a3;
-		public static final int notification_tile_bg = 0x7f0700a4;
-		public static final int notify_panel_notification_icon_bg = 0x7f0700a5;
+		public static final int notification_action_background = 0x7f07009c;
+		public static final int notification_bg = 0x7f07009d;
+		public static final int notification_bg_low = 0x7f07009e;
+		public static final int notification_bg_low_normal = 0x7f07009f;
+		public static final int notification_bg_low_pressed = 0x7f0700a0;
+		public static final int notification_bg_normal = 0x7f0700a1;
+		public static final int notification_bg_normal_pressed = 0x7f0700a2;
+		public static final int notification_icon_background = 0x7f0700a3;
+		public static final int notification_template_icon_bg = 0x7f0700a4;
+		public static final int notification_template_icon_low_bg = 0x7f0700a5;
+		public static final int notification_tile_bg = 0x7f0700a6;
+		public static final int notify_panel_notification_icon_bg = 0x7f0700a7;
 	}
 	public static final class id {
 		public static final int accessibility_action_clickable_span = 0x7f08000f;
@@ -151,13 +151,13 @@ public final class R {
 		public static final int status_bar_notification_info_overflow = 0x7f0e0085;
 	}
 	public static final class style {
-		public static final int TextAppearance_Compat_Notification = 0x7f0f0184;
-		public static final int TextAppearance_Compat_Notification_Info = 0x7f0f0185;
-		public static final int TextAppearance_Compat_Notification_Line2 = 0x7f0f0187;
-		public static final int TextAppearance_Compat_Notification_Time = 0x7f0f018a;
-		public static final int TextAppearance_Compat_Notification_Title = 0x7f0f018c;
-		public static final int Widget_Compat_NotificationActionContainer = 0x7f0f0274;
-		public static final int Widget_Compat_NotificationActionText = 0x7f0f0275;
+		public static final int TextAppearance_Compat_Notification = 0x7f0f0185;
+		public static final int TextAppearance_Compat_Notification_Info = 0x7f0f0186;
+		public static final int TextAppearance_Compat_Notification_Line2 = 0x7f0f0188;
+		public static final int TextAppearance_Compat_Notification_Time = 0x7f0f018b;
+		public static final int TextAppearance_Compat_Notification_Title = 0x7f0f018d;
+		public static final int Widget_Compat_NotificationActionContainer = 0x7f0f0275;
+		public static final int Widget_Compat_NotificationActionText = 0x7f0f0276;
 	}
 	public static final class styleable {
 		public static final int[] AnimatedStateListDrawableCompat = new int[] { 0x0101011c, 0x01010194, 0x01010195, 0x01010196, 0x0101030c, 0x0101030d };

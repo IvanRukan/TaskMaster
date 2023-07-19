@@ -12,7 +12,7 @@
   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-  <application android:label="TaskMaster" android:theme="@style/MainTheme" android:icon="@drawable/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true" android:extractNativeLibs="true">
+  <application android:label="TaskMaster" android:theme="@style/MainTheme" android:icon="@mipmap/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true" android:extractNativeLibs="true">
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:label="TaskMaster" android:theme="@style/MainTheme" android:name="crc640dafc1b1d8f3728e.MainActivity" />
     <activity android:label="TaskMaster" android:noHistory="true" android:theme="@style/MyTheme.Splash" android:name="crc640dafc1b1d8f3728e.SplashActivity" android:exported="true">
