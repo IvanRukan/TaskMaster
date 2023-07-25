@@ -13,7 +13,7 @@ namespace ThingsToDo
             get { 
                 if(db == null)
                 {
-                    db = new DB(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"db.sqlite3"));
+                    db = new DB(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "new_db"));  //db.sqlite3
                 }
                 return db;
             }

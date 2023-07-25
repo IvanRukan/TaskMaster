@@ -16,3 +16,5 @@ A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\ref
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\GroupCreation.xaml.g.cs
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\GroupDeletion.xaml.g.cs
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\NotificationCreation.xaml.g.cs
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\ClosestNotifications.xaml.g.cs
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Debug\netstandard2.0\GroupPage.xaml.g.cs

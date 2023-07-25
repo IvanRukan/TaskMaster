@@ -71,7 +71,7 @@ namespace ThingsToDo
                 {
                     NotificationCenter.Current.Cancel(notificationId: all[i].Id);
                     conn.Delete(all[i]);
-                    return;
+                    
                 }
             }
         }

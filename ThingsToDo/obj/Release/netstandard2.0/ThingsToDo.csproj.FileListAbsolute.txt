@@ -16,3 +16,5 @@ A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Release\netstandard2.0\T
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Release\netstandard2.0\refint\ThingsToDo.dll
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Release\netstandard2.0\ThingsToDo.pdb
 A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Release\netstandard2.0\ref\ThingsToDo.dll
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Release\netstandard2.0\ClosestNotifications.xaml.g.cs
+A:\soft\VisualStudio\projects\ThingsToDo\ThingsToDo\obj\Release\netstandard2.0\GroupPage.xaml.g.cs

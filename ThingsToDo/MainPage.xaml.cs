@@ -78,7 +78,8 @@ namespace ThingsToDo
                 no_bd_top_frame_buttons.Orientation = StackOrientation.Horizontal;
                 Button no_bd_recent_events = new Button();
                 no_bd_recent_events.Text = "Ближайшие напоминания";
-                no_bd_recent_events.TextColor = Color.FromHex("#DAFFFB");
+                no_bd_recent_events.TextColor = Color.Gray;
+                no_bd_recent_events.IsEnabled = false;
                 no_bd_recent_events.BackgroundColor = Color.FromHex("#176B87");
                 no_bd_recent_events.FontFamily = "InterRegular";
                 no_bd_recent_events.FontSize = 11;
@@ -88,6 +89,7 @@ namespace ThingsToDo
                 Button no_bd_all_events = new Button();
                 no_bd_all_events.Text = "Все напоминания";
                 no_bd_all_events.TextColor = Color.FromHex("#DAFFFB");
+                no_bd_all_events.IsEnabled = true;
                 no_bd_all_events.BackgroundColor = Color.FromHex("#176B87");
                 no_bd_all_events.FontFamily = "InterSemiBold";
                 no_bd_all_events.FontSize = 11;
@@ -98,7 +100,8 @@ namespace ThingsToDo
                 no_bd_top_frame_buttons.Children.Add(no_bd_all_events);
                 Button no_bd_group_events = new Button();
                 no_bd_group_events.Text = "Напоминания по группе";
-                no_bd_group_events.TextColor = Color.FromHex("#DAFFFB");
+                no_bd_group_events.TextColor = Color.Gray;
+                no_bd_group_events.IsEnabled = false;
                 no_bd_group_events.BackgroundColor = Color.FromHex("#176B87");
                 no_bd_group_events.FontFamily = "InterRegular";
                 no_bd_group_events.FontSize = 11;
@@ -171,6 +174,7 @@ namespace ThingsToDo
             recent_events.FontSize = 11;
             recent_events.WidthRequest = 118;
             recent_events.CornerRadius = 25;
+            recent_events.Clicked += Recent_events_Clicked;
             top_frame_buttons.Children.Add(recent_events);
             Button all_events = new Button();
             all_events.Text = "Все напоминания";
@@ -191,6 +195,7 @@ namespace ThingsToDo
             group_events.FontSize = 11;
             group_events.WidthRequest = 118;
             group_events.CornerRadius = 20;
+            group_events.IsEnabled = false;
             top_frame_buttons.Children.Add(group_events);
             top_frame.Content = top_frame_buttons;
             
@@ -224,7 +229,11 @@ namespace ThingsToDo
             delete_group.Clicked += DeleteGroup;
             button_layout.Children.Add(create_group);
             button_layout.Children.Add(delete_group);
-           
+            if(existing?.Any() != true)
+            {
+                recent_events.IsEnabled = false;
+                
+            }
             
             Frame footer = new Frame();
             footer.BackgroundColor = Color.FromHex("#176B87");            
@@ -342,6 +351,18 @@ namespace ThingsToDo
 
 
         }
+        readonly ClosestNotifications closestNotifications = new ClosestNotifications();
+        private async void Recent_events_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                await Navigation.PushModalAsync(closestNotifications, animated: false);
+            }
+            catch
+            {
+                return;
+            }
+        }
 
         private void Current_OnNotificationReceived(NotificationEventArgs e)
         {
@@ -357,7 +378,7 @@ namespace ThingsToDo
         {
             try
             {
-                await Navigation.PushModalAsync(new_notification);
+                await Navigation.PushModalAsync(new_notification, animated:true);
             }
             catch
             {

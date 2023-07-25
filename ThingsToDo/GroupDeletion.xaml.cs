@@ -25,7 +25,6 @@ namespace ThingsToDo
             CancellingButton.HeightRequest = 70;
             ConfirmingButton.Source = "DisabledSave.png";
             ConfirmingButton.IsEnabled = false;
-            groups.SelectedItem = null;
             List<Group> resulting_groups = App.Db.GetGroups();
             if (resulting_groups?.Any() != true) 
             {
@@ -65,6 +64,8 @@ namespace ThingsToDo
             {
                 CancellingButton.WidthRequest = 50;
                 CancellingButton.HeightRequest = 50;
+                ConfirmingButton.Source = "DisabledSave.png";
+                ConfirmingButton.IsEnabled = false;
                 await Navigation.PopModalAsync();
             }
             catch
@@ -90,7 +91,8 @@ namespace ThingsToDo
                         break;
                     }
                 }
-             
+                ConfirmingButton.Source = "DisabledSave.png";
+                ConfirmingButton.IsEnabled = false;
                 await Navigation.PopModalAsync();
                 
             }
